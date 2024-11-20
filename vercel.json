@@ -8,8 +8,13 @@
     ],
     "routes": [
       {
-        "src": "/todos",
-        "dest": "/api/todos.js"
+        "src": "/api/todos",
+        "dest": "api/todos.js"
+      },
+      {
+        "src": "/api/todos/(.*)",
+        "dest": "api/todos.js"
       }
     ]
   }
+  
