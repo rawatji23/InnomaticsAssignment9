@@ -17,8 +17,10 @@ mongoose.connect('mongodb+srv://vijayrawat:vijayrawat@cluster0.dsxbi.mongodb.net
 });
 
 // Import routes
-const todoRoutes = require('../routes/todos');
+const todoRoutes = require('./routes/todos');
 app.use('/todos', todoRoutes);
 
-// Export the app (for Vercel)
-module.exports = app;
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
